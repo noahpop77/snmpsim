@@ -134,9 +134,10 @@ else:
                     return
 
             else:
-                if not self._uname or not self._gname:
-                    raise error.SnmpsimError(
-                        'Must drop privileges to a non-privileged user&group')
+                return
+                #if not self._uname or not self._gname:
+                #    raise error.SnmpsimError(
+                #        'Must drop privileges to a non-privileged user&group')
 
             try:
                 runningUid = pwd.getpwnam(self._uname).pw_uid
